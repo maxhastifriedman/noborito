@@ -1,4 +1,4 @@
-// app/page.tsx or pages/index.tsx
+// app/page.tsx
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -30,17 +30,29 @@ export default function HomePage() {
           <p className="mt-4 text-lg">
             全ての年齢層の方々に向けた英語教育の機会を提供します
           </p>
-          <div className="mt-6 flex gap-4">
-            <Link href="/kodomo" className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
-              子供
-            </Link>
-            <Link href="/otona" className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded">
-              大人
-            </Link>
-            <Link href="/nenkyaku" className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded">
-              年客
-            </Link>
-          </div>
+          {/* Call-to-Action Buttons */}
+          <div className="mt-6 flex justify-center gap-4">
+  <Link
+    href="/kodomo"
+    className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded shadow-lg transition flex-shrink-0"
+  >
+    子供
+  </Link>
+  <Link
+    href="/otona"
+    className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded shadow-lg transition flex-shrink-0"
+  >
+    大人
+  </Link>
+  <Link
+    href="/nenkyaku"
+    className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded shadow-lg transition flex-shrink-0"
+  >
+    年客
+  </Link>
+</div>
+
+
         </div>
       </header>
 
