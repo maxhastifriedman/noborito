@@ -33,22 +33,22 @@ export default function HomePage() {
           {/* Call-to-Action Buttons */}
           <div className="mt-6 flex justify-center gap-4">
   <Link
-    href="/kodomo"
-    className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded shadow-lg transition flex-shrink-0"
+    href="/oyako"
+    className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded shadow-lg transition min-w-[120px] text-center"
   >
-    子供
+    親子
   </Link>
   <Link
-    href="/otona"
-    className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded shadow-lg transition flex-shrink-0"
+    href="/sotoasobi"
+    className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded shadow-lg transition min-w-[120px] text-center"
   >
-    大人
+    外遊び
   </Link>
   <Link
-    href="/nenkyaku"
-    className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded shadow-lg transition flex-shrink-0"
+    href="/roleplay"
+    className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded shadow-lg transition min-w-[120px] text-center"
   >
-    年客
+    ロールプレイ
   </Link>
 </div>
 
