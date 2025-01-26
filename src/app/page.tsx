@@ -45,10 +45,10 @@ export default function HomePage() {
     外遊び
   </Link>
   <Link
-    href="/roleplay"
-    className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded shadow-lg transition min-w-[120px] text-center"
+    href="/scheherazade"
+    className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded shadow-lg transition"
   >
-    ロールプレイ
+    シェヘラザード
   </Link>
 </div>
 

@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import styles from '../styles/classes.module.css';
 
-const Sotoasobi: NextPage = () => {
+const Scheherazade: NextPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Service Item Wrapper */}
@@ -10,16 +10,17 @@ const Sotoasobi: NextPage = () => {
         <div className={styles.serviceImage}>
           {/* Replace with an actual image when available */}
           <img
-            src="/images/sports.webp"
-            alt="Outdoor Activity Class"
+            src="/images/book.webp"
+            alt="Scheherazade Class"
             className={styles.serviceImage}
           />
         </div>
         {/* Text Section */}
         <div className={styles.serviceDescription}>
-          <h1 className={styles.serviceTitle}>外遊びクラス</h1>
+          <h1 className={styles.serviceTitle}>シェヘラザードクラス</h1>
           <p className={styles.serviceText}>
-            自然の中で英語を学ぶクラスです。外遊びを通じて、楽しく英語を学び、体を動かしながら実践的な英語スキルを身につけます。
+            物語を通じて英語を学ぶ創造的なクラスです。想像力を働かせながら、語彙や表現を自然に身につけることができます。
+            自分のストーリーを作り上げる体験を楽しんでください！
           </p>
         </div>
       </div>
@@ -27,4 +28,4 @@ const Sotoasobi: NextPage = () => {
   );
 };
 
-export default Sotoasobi;
+export default Scheherazade;
