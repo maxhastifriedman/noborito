@@ -1,0 +1,55 @@
+How to push release to NAS:
+
+1.
+Prerequisite: Have access to NAS on local network
+
+2.
+Open Docker Desktop
+
+3.
+Prerequisite: set up alias
+In Git:
+max
+
+4.
+In Unraid terminal:
+/mnt/user/appdata/./update_app.sh "maxlang" 1945
+
+Done!
+
+
+
+Initial Setup:
+
+Add maxlang folder to NAS appdata
+
+Add alias to aliases.sh:
+(C:\Program Files\Git\etc\profile.d\aliases.sh)
+
+alias max='push_to_nas maxlang'
+
+function push_to_nas {
+    command="npm run build"
+    echo $command
+    eval $command
+
+    command="docker build -t $1 ."
+    echo $command
+    eval $command
+
+    command="docker save -o $1.tar $1"
+    echo $command
+    eval $command
+
+    if [ -f "//192.168.50.2/appdata/$1/$1.tar" ]; then
+        command="rm //192.168.50.2/appdata/$1/$1.tar"
+        echo $command
+        eval $command
+    fi
+
+    command="cp $1.tar //192.168.50.2/appdata/$1/$1.tar"
+    echo $command
+    eval $command
+
+    echo "Operations completed."
+}
