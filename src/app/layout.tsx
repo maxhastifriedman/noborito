@@ -17,8 +17,8 @@ const geistMono = localFont({
 
 // Metadata for global usage, including favicon
 export const metadata: Metadata = {
-  title: "Noborito English Club", // Your custom site title
-  description: "Providing English education opportunities in Noborito.", // Custom description
+  title: "Max English Club", // Your custom site title
+  description: "Providing English education opportunities in Kanagawa.", // Custom description
   icons: {
     icon: "/favicon.ico", // Points to the favicon in the `public` folder
     apple: "/images/apple-touch-icon.png", // Optional: for Apple devices
