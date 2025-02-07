@@ -5,12 +5,11 @@ import styles from '../styles/classes.module.css';
 const Roleplay: NextPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Service Item Wrapper */}
       <div className={`${styles.serviceItem} flex flex-col sm:flex-row items-center sm:items-start`}>
         {/* Image Section */}
         <div className="w-full sm:w-1/3 flex justify-center">
           <Image
-            src="/images/roleplay.webp" // Ensure this file exists in /public/images/
+            src="/images/roleplay.webp"
             alt="Roleplay Class"
             width={400}
             height={300}
@@ -19,7 +18,7 @@ const Roleplay: NextPage = () => {
         </div>
 
         {/* Text Section */}
-        <div className={`${styles.serviceDescription} w-full sm:w-2/3 sm:pl-6`}>
+        <div className={`${styles.serviceDescription} w-full sm:w-2/3 sm:pl-6 text-center sm:text-left`}>
           <h1 className="text-2xl font-bold text-gray-900 mb-4">実践型ロールプレイ英会話クラス 🏆</h1>
           <p className="text-gray-700">
             🔹 <strong>日常生活や旅行で実際に使える英語を、リアルなシナリオを通じて練習！</strong><br />
@@ -27,21 +26,14 @@ const Roleplay: NextPage = () => {
             🔹 <strong>シナリオごとに段階的なチャレンジが用意され、効果的に学習を進められる！</strong>
           </p>
 
-          {/* Class Features Section */}
           <div className="mt-6 bg-gray-100 p-4 rounded-lg shadow-md">
             <h2 className="text-lg font-bold text-gray-800 mb-2">📍 クラスの特徴</h2>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
               <li>✅ <strong>リアルなシナリオ体験</strong> - 盗難の報告、薬の購入、乗り換えトラブルなど、実際の状況を想定した英会話を練習！</li>
               <li>✅ <strong>語彙＆文法をしっかり活用</strong> - すぐに使える英単語＆文法をレッスン前に配布し、実際の会話で活用！</li>
               <li>✅ <strong>カスタマイズ可能な難易度</strong> - 初級から上級まで、レベルに応じた練習が可能！</li>
-              <li>✅ <strong>即興力を鍛える対話型レッスン</strong> - 固定フレーズだけでなく、状況に応じた自然なやり取りを学べる！</li>
             </ul>
           </div>
-
-          {/* Final Encouragement */}
-          <p className="mt-6 text-gray-900 text-lg font-semibold text-center">
-            🌟「実際に使える英語」を楽しく学び、海外旅行や日常会話に自信をつけましょう！🌟
-          </p>
         </div>
       </div>
     </div>
