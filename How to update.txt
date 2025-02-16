@@ -13,6 +13,8 @@ max
 
 4.
 In Unraid terminal:
+http://192.168.50.2/webterminal/ttyd/
+Paste as plain text:
 /mnt/user/appdata/./update_app.sh "maxlang" 1945
 
 Done!
