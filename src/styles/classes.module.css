@@ -1,42 +1,66 @@
-/* classes.module.css */
-
-/* Frame around the image and text */
+/* Ensure the container remains structured */
 .serviceItem {
   display: flex;
-  flex-wrap: nowrap; /* Keep image and text side by side */
+  flex-wrap: wrap; /* Allow images & text to stack on smaller screens */
   border: 1px solid #d1d5db; /* Light gray border */
   border-radius: 12px; /* Rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   background-color: #f3f4f6; /* Full gray background */
   overflow: hidden; /* Ensures content stays within the frame */
   margin-bottom: 24px; /* Space between frames */
+  padding: 16px; /* Added padding for better spacing */
 }
 
 /* Image section */
 .serviceImage {
-  flex: 0 0 400px; /* Fixed width for consistency */
-  height: 300px; /* Fixed height for consistent cropping */
-  object-fit: cover; /* Crop image while preserving aspect ratio */
+  flex: 0 0 400px; /* Fixed width for desktop */
+  height: 300px; /* Fixed height */
+  object-fit: cover; /* Ensures the image scales properly without distortion */
   border-radius: 12px 0 0 12px; /* Round left-side corners */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
 /* Text section */
 .serviceDescription {
-  flex: 1; /* Fill the remaining space */
+  flex: 1; /* Fills the remaining space */
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 24px; /* Padding around the text */
   background-color: #f3f4f6; /* Match the frame background */
+  text-align: center; /* Center text on smaller screens */
 }
 
+/* Responsive Design - Mobile Adjustments */
+@media (max-width: 768px) {
+  .serviceItem {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center; /* Center content */
+    text-align: center; /* Center text */
+  }
+
+  .serviceImage {
+    flex: none;
+    width: 100%; /* Make image full width on smaller screens */
+    max-width: 350px; /* Prevents it from getting too large */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 12px 12px 0 0; /* Adjusted for stacked layout */
+  }
+
+  .serviceDescription {
+    padding: 16px; /* Reduce padding for smaller screens */
+  }
+}
+
+/* Title Styling */
 .serviceTitle {
-  font-size: 1.5rem; /* Consistent with other pages */
+  font-size: 1.5rem; /* Text-xl equivalent */
   font-weight: bold;
   margin-bottom: 8px;
   color: #111827; /* Dark text for contrast */
 }
 
+/* Description Text */
 .serviceText {
   font-size: 1rem; /* Same as other pages */
   color: #4b5563; /* Light gray text */

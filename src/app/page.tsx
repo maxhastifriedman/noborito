@@ -1,4 +1,3 @@
-// app/page.tsx
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -19,6 +18,11 @@ export default function HomePage() {
                 お問い合わせ
               </Link>
             </li>
+            <li>
+              <Link href="/services" className="text-gray-800 hover:text-blue-500">
+                他のサービス
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
@@ -31,36 +35,49 @@ export default function HomePage() {
             全ての年齢層の方々に向けた英語教育の機会を提供します
           </p>
 
-          {/* Call-to-Action Buttons - FIXED */}
-          <div className="mt-6 flex flex-col sm:flex-row gap-4 items-center sm:justify-center">
-            <Link
-              href="/oyako"
-              className="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded shadow-lg transition min-w-[150px] text-center"
-            >
-              親子
-            </Link>
-            <Link
-              href="/sotoasobi"
-              className="bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded shadow-lg transition min-w-[150px] text-center"
-            >
-              外遊び
-            </Link>
-            <Link
-              href="/roleplay"
-              className="bg-red-500 hover:bg-red-600 text-white py-3 px-6 rounded shadow-lg transition min-w-[150px] text-center"
-            >
-              ロールプレイ
-            </Link>
+          {/* Call-to-Action Buttons for Classes */}
+          <div className="mt-6 flex flex-col gap-4 items-center">
+            {/* First Row - 3 Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/oyako"
+                className="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded shadow-lg transition min-w-[150px] text-center"
+              >
+                親子
+              </Link>
+              <Link
+                href="/kodomo"
+                className="bg-amber-400 hover:bg-amber-500 text-white py-3 px-6 rounded shadow-lg transition min-w-[150px] text-center"
+              >
+                子供
+              </Link>
+              <Link
+                href="/otona"
+                className="bg-red-500 hover:bg-red-600 text-white py-3 px-6 rounded shadow-lg transition min-w-[150px] text-center"
+              >
+                大人
+              </Link>
+            </div>
+
+             {/* Second Row - Premium Button (Light Gray & Wider) */}
+             <div>
+              <Link
+                href="/premium"
+                className="bg-slate-300 hover:bg-slate-400 text-black py-3 px-20 rounded shadow-lg transition min-w-[200px] text-center"
+              >
+                プレミアム
+              </Link>
+            </div>
           </div>
         </div>
       </header>
 
-      {/* Content Section */}
+      {/* Classes Section */}
       <section className="bg-white text-gray-800 py-12">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold">このサイトについて</h2>
+          <h2 className="text-2xl font-bold">クラス一覧</h2>
           <p className="mt-4">
-            このウェブサイトでは、Max English Clubの活動内容や英語教育プロジェクトに関する情報を閲覧することができます。
+            さまざまな年齢層向けの英語クラスをご用意しています。
           </p>
         </div>
       </section>

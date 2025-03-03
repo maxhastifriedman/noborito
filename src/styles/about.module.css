@@ -1,5 +1,19 @@
+/* Make sure navbar doesn't overlap content */
 .about-page {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-}
+    min-height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/images/about-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 20px 60px; /* Adds padding at top (for navbar) and bottom (for footer) */
+    text-align: center;
+  }
+  
+  /* Responsive fix */
+  @media (max-width: 768px) {
+    .about-page {
+      padding: 100px 15px 80px; /* More padding for mobile */
+    }
+  }
+  
