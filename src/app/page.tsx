@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import Layout from '../components/Layout';
 
 export default function HomePage() {
   return (
+    <Layout>
     <div className="min-h-screen bg-[url('/images/wallpaper.jpg')] bg-cover bg-center bg-fixed text-white">
-      {/* Navbar */}
+      {/* Navbar 
       <nav className="bg-white bg-opacity-80 backdrop-blur-sm py-4 fixed top-0 left-0 w-full z-10 shadow-md">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <h1 className="text-xl font-bold text-gray-800">Max English Club</h1>
@@ -26,7 +28,7 @@ export default function HomePage() {
           </ul>
         </div>
       </nav>
-
+*/}
       {/* Hero Section */}
       <header className="flex flex-col items-center justify-center h-screen text-center">
         <div className="bg-black bg-opacity-50 p-8 rounded-lg">
@@ -87,5 +89,6 @@ export default function HomePage() {
         <p>&copy; 2024 Max English Club. All rights reserved.</p>
       </footer>
     </div>
+    </Layout>
   );
 }

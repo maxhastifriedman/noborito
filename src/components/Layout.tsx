@@ -7,13 +7,14 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+    
     return (
         <div className="flex flex-col min-h-screen">
             {/* Navbar (Now Matches Home Page) */}
             <Navbar />
 
             {/* Main Content */}
-            <main className="flex-1 pt-20">{children}</main>
+            <main className="flex-1 pt-24">{children}</main>
 
             {/* Footer */}
             <Footer />
