@@ -1,17 +1,44 @@
 .about-page {
-  min-height: 100vh; /* Full height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url('/images/about-bg.jpg') no-repeat center center fixed;
+  position: relative;
+  min-height: 100vh;
+  background-image: url('/images/wallpaper2.webp');
   background-size: cover;
-  padding: 120px 20px 60px; /* Increase top padding for navbar */
-  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
-/* Responsive fix */
-@media (max-width: 768px) {
-  .about-page {
-      padding: 140px 15px 80px; /* More top padding on mobile */
-  }
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.4));
+}
+
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  max-width: 600px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.profile-photo {
+  width: 180px; /* Adjust size as needed */
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
