@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import './globals.css'; // Global CSS file (Tailwind or custom styles)
-import { ReactNode } from 'react';
-import Layout from '../components/Layout'; // Import Layout to wrap all pages
+import "./globals.css"; // ✅ Import global styles ONCE
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-// Local fonts
+// Load Local Fonts
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -16,7 +16,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-// Metadata for global usage
+// Global Metadata
 export const metadata: Metadata = {
   title: "Max English Club",
   description: "Providing English education opportunities in Kanagawa.",
@@ -28,16 +28,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ja">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* 🛠️ Wrap everything in Layout.tsx */}
-        <Layout>
-          {children}
-        </Layout>
+        {/* ✅ Navbar & Footer are now directly inside app/layout.tsx */}
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          
+          {/* ✅ Main Content */}
+          <main className="flex-1 pt-24">{children}</main>
+
+          <Footer />
+        </div>
       </body>
     </html>
   );

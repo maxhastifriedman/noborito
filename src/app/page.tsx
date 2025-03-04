@@ -1,9 +1,7 @@
 import Link from 'next/link';
-import Layout from '../components/Layout';
 
 export default function HomePage() {
   return (
-    <Layout>
     <div className="min-h-screen bg-[url('/images/wallpaper.jpg')] bg-cover bg-center bg-fixed text-white">
       {/* Navbar 
       <nav className="bg-white bg-opacity-80 backdrop-blur-sm py-4 fixed top-0 left-0 w-full z-10 shadow-md">
@@ -89,6 +87,6 @@ export default function HomePage() {
         <p>&copy; 2024 Max English Club. All rights reserved.</p>
       </footer>
     </div>
-    </Layout>
+  
   );
 }

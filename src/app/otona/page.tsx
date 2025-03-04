@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
-import styles from '../styles/classes.module.css';
+import styles from '../../styles/classes.module.css';
 
 const Roleplay: NextPage = () => {
   return (
