@@ -1,17 +1,19 @@
 How to push release to NAS:
 
 1.
-Prerequisite: Have access to NAS on local network
+ Open remote desktop and connect
 
 2.
-Open Docker Desktop
+Open Docker Desktop on jades computer
 
-3.
-Prerequisite: set up alias
-In Git:
-max
+3. in the terminal enter:
+git pull
 
 4.
+in the terminal enter:
+max
+
+5.
 In Unraid terminal:
 http://192.168.50.2/webterminal/ttyd/
 Paste as plain text:

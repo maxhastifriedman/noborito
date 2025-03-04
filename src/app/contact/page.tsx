@@ -28,8 +28,10 @@ export default function ContactPage() {
         setStatus("❌ エラーが発生しました。");
       }
     } catch (error) {
+      console.error("Error submitting form:", error); // Logs error to the console
       setStatus("❌ 送信に失敗しました。");
     }
+    
   };
 
   return (
