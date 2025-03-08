@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { EMAIL_PASS, EMAIL_USER, RECIPIENT_EMAIL } from "@/local";
 
 export async function POST(req: Request) {
   try {
@@ -9,15 +10,15 @@ export async function POST(req: Request) {
     const transporter = nodemailer.createTransport({
       service: "gmail", // You can change this to SendGrid, Outlook, etc.
       auth: {
-        user: process.env.EMAIL_USER, // Use environment variables
-        pass: process.env.EMAIL_PASS,
+        user: EMAIL_USER, // Use environment variables
+        pass: EMAIL_PASS,
       },
     });
 
     // Email content
     const mailOptions = {
       from: email,
-      to: process.env.RECIPIENT_EMAIL, // Your personal email
+      to: RECIPIENT_EMAIL, // Your personal email
       subject: `お問い合わせ: ${name}`,
       text: `名前: ${name}\nメール: ${email}\n\nメッセージ:\n${message}`,
     };
