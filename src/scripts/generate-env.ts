@@ -3,7 +3,7 @@ import * as fs from "fs";
 import * as path from "path";
 
 // Ensure the file is written in the root directory
-const envPath = path.resolve(__dirname, "../.env");
+const envPath = path.resolve(__dirname, "../../.env");
 
 const envContent = `EMAIL_USER=${EMAIL_USER}
 EMAIL_PASS=${EMAIL_PASS}
