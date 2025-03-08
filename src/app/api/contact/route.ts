@@ -10,7 +10,7 @@ export async function POST(req: Request) {
     const transporter = nodemailer.createTransport({
       service: "gmail", // You can change this to SendGrid, Outlook, etc.
       auth: {
-        user: EMAIL_USER, // Use environment variables
+        user: EMAIL_USER,
         pass: EMAIL_PASS,
       },
     });
